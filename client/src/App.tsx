@@ -1,17 +1,10 @@
 import {FC} from "react";
+import Router from "./router";
+// import 'antd/dist/antd.css'
+import './style.scss'
 
-interface MyCompros {
-    name: string
-    age: number
-}
-
-const App: FC<MyCompros> = ({name, age}) => {
-    return (
-        <div><h1>
-            {name} - {age}{" "}
-        </h1>
-        </div>
-    );
+const App: FC = () => {
+    return <Router />
 };
 
-export default App;
+export default App
