@@ -4,6 +4,7 @@ from .utils import decode_jwt
 
 class IsAuthenticatedCustom(BasePermission):
     def has_permission(self, request, view):
+        # return True
         try:
             auth_token = request.Meta.get("HTTP_AUTHORIZATION", None)
         except Exception:

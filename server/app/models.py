@@ -152,7 +152,10 @@ class InvoiceItem(models.Model):
         Invoice, related_name="invoice_items", on_delete=models.CASCADE
     )
     item = models.ForeignKey(
-        Inventory, related_name="inventory_invoices", on_delete=models.SET_NULL
+        Inventory,
+        related_name="inventory_invoices",
+        null=True,
+        on_delete=models.SET_NULL,
     )
     item_name = models.CharField(max_length=255, null=True)
     item_code = models.CharField(max_length=20, null=True)
